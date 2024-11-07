@@ -34,13 +34,13 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
 
   test:
-  runs-on: windows-latest
+    runs-on: windows-latest
 
-  steps:
-    - uses: actions/checkout@v4
-    - name: Run tests
-      working-directory: ./Test
-      run: dotnet test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        working-directory: ./Test
+        run: dotnet test
 
   deploy:
     runs-on: windows-latest
