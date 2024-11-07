@@ -2,7 +2,12 @@
 
 namespace ValidateTheNameModelBinding.Util
 {
-    public class PersonRepository
+    public interface IPersonRepository
+    {
+        void AddPerson(Person person);
+    }
+
+    public class PersonRepository : IPersonRepository
     {
         public void AddPerson(Person person)
         {
